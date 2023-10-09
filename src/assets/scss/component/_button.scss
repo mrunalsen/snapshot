@@ -1,0 +1,42 @@
+@layer components {
+    .btn-primary {
+        @apply px-4 py-2 text-lg text-center font-semibold text-white transition-colors duration-300 bg-blue-500 rounded-md select-none shadow hover:bg-blue-600 focus:outline-none focus:ring-blue-200 focus:ring-4
+    }
+    .btn-danger {
+        @apply px-4 py-2 text-lg text-center font-semibold text-white transition-colors duration-300 bg-rose-500 rounded-md select-none shadow hover:bg-rose-600 focus:outline-none focus:ring-rose-200 focus:ring-4
+    }
+
+    .input-primary {
+        @apply px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200
+    }
+
+    .btn-outline-primary {
+        @apply px-4 py-2 space-x-2 text-center transition-colors duration-300 border border-blue-500 rounded-md hover:bg-blue-500 hover:text-white focus:outline-none
+    }
+    .btn-outline-danger {
+        @apply px-4 py-2 space-x-2 text-center transition-colors duration-300 rounded-md hover:bg-rose-500 hover:text-white focus:outline-none
+    }
+
+    .text-outline-primary {
+        @apply text-lg font-semibold text-blue-500 group-hover:text-white
+    }
+}
+
+
+
+.slider-container {
+    .slider{
+        @apply transition duration-300 h-[15px] w-[15px] bg-white rounded-full ms-1
+    }
+    @apply flex items-center bg-zinc-400 rounded-full transition duration-300 w-[40px] h-[22px] me-2
+}
+
+.checkbox:checked {
+    &~.slider-container {
+        .slider{
+            transform: translateX(18px);
+        }
+        @apply bg-green-400
+    }
+    
+}
