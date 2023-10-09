@@ -1,0 +1,60 @@
+.item- {
+    &enter {
+        transform: translate(100%);
+    }
+
+    &enter-active {
+        transform: translate(0%);
+        transition: transform 250ms ease-in-out;
+    }
+
+    &exit {
+        transform: translate(0%);
+    }
+
+    &exit-active {
+        transform: translate(-100%);
+        transition: transform 250ms ease-in-out;
+    }
+}
+
+.alert- {
+    &enter {
+        position: absolute;
+        right: 8px;
+        top: 68px;
+        opacity: 0;
+        transform: scale(0.9);
+
+        &-done {
+            position: absolute;
+            right: 8px;
+            top: 68px;
+        }
+    }
+
+    &enter-active {
+        position: absolute;
+        right: 8px;
+        top: 68px;
+        opacity: 1;
+        transform: translateX(1px);
+        transition: opacity 300ms, transform 300ms;
+    }
+
+    &exit {
+        position: absolute;
+        opacity: 1;
+        right: 8px;
+        top: 68px;
+    }
+
+    &exit-active {
+        position: absolute;
+        right: 8px;
+        top: 68px;
+        opacity: 0;
+        transform: scale(0.9);
+        transition: opacity 300ms, transform 300ms;
+    }
+}
